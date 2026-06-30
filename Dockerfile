@@ -18,4 +18,4 @@ RUN mkdir -p /vol/web/media /vol/web/static && \
 
 USER django-user
 
-CMD ["gunicorn", "cinema_service.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
